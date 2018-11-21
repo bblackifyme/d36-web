@@ -1,0 +1,9 @@
+{% if racers %}
+    <ul>
+    {% for racer in racers %}
+        <li><a href="{% url 'racer:racer' racer.district_num %}/">{{ racer }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No racers are available.</p>
+{% endif %}
